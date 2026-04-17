@@ -9,6 +9,15 @@ public class DatabaseConnectionUtil {
     private static final String DB_USER = "root"; // Update username
     private static final String DB_PASSWORD = "password"; // Update password
 
+    static {
+        try {
+            // Explicitly load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("MySQL JDBC Driver not found. Include it in your library path.", e);
+        }
+    }
+
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
