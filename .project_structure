@@ -1,0 +1,4 @@
+Root Directory Structure:
+- src/main/java/... (Move Java files here)
+- src/main/resources/... (Place config files here)
+- src/test/java/... (For test files)
