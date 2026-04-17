@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import src.DatabaseConnectionUtil;
+import src.DBConnection.DatabaseConnectionUtil;
 
 public class UserDAO {
     public void createUser(String name, String email) {
